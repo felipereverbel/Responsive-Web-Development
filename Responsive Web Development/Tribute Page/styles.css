@@ -1,0 +1,104 @@
+html {
+  background-color: #EDFCFD;
+  font-size: 16px;
+  font-family: optima, sans serif;
+  color: #2d2d34
+}
+
+main {
+  background-color: #e2dcde;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  padding-bottom: 50px; 
+}
+
+h1 {
+  display: block;
+  margin: auto;
+  padding-top: 60px;
+  text-align: center;
+  font-size: 4em;
+}
+
+.subtitle {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 5;
+}
+
+figure {
+  background-color: #ceb1be;
+  width: 98%;
+  height: auto;
+  margin: 50px auto 0;
+  border: 1px solid #ceb1be;
+}
+
+figure > img {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 30px auto 10px;
+  padding: 0 20px;
+  display: block;
+}
+
+figure > figcaption {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#tribute-info,
+.disco,
+.finale {
+  text-align: justify;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+
+#tribute-info,
+h2,
+h3,
+h4,
+.finale {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  padding: 0 40px;;
+  margin: 30px auto 10px;
+}
+
+h2,
+h3,
+h4,
+.visit {
+  font-size: 1.5em;
+}
+
+.disco {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  padding: 0 40px;;
+  margin: 30px auto 10px;
+  list-style-type: none;
+}
+
+li{
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+
+.visit {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  margin: 80px auto 10px;
+  text-align: center;
+  font-weight: 600;
+  word-spacing: 0.1em;
+  font-family: arial, sans-serif;
+}

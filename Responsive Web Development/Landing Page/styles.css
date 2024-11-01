@@ -1,0 +1,463 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  grid-template-columns: [marginl-left] 10% [end-margin-left content]80% [end-content margin-right] 10%;
+  row-gap: 3rem;
+  margin: 0;
+}
+/*headers and paragraph*/
+h1,
+h2,
+h3,
+a {
+  font-family: optima, sans-serif;
+  color: #5D2C04;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  font-family: Helvetica, serif;
+  color: #1a1a1a;
+  font-size: 1.7rem;
+  line-height: 2.3rem;
+  letter-spacing: 3%;
+  word-spacing: 3%;
+  text-indent: 3%;
+  white-space: normal;
+  text-align: justify;
+  margin: auto;
+}
+/*START of navbar*/
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  grid-column:2/3;
+  grid-row:1/2;
+  display: grid;
+  grid-template-columns: [H-logo] 41.5% [nav-bar] 50%;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  padding: 2% 0 2% 12%;
+  background-color: #fff;
+}
+
+#header-img {
+  grid-column: 1/2;
+}
+
+#nav-bar {
+  grid-column: 2/-1;
+}
+
+header ul {
+  display: grid;
+  grid-template-columns: repeat (3 1fr);
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 6rem;
+}
+
+li{
+  list-style: none;
+}
+
+.nav-link,
+.F-nav-link,
+.CI-link {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: assistant, sans-serif;
+}
+
+.nav-link:hover {
+  color: #EFD1A8;
+  text-decoration: underline;
+}
+
+/*DEFAULT Tiers*/
+main {
+  margin-top: 65px;   
+  grid-column: 2/3;
+  grid-row: 2/3;
+  }
+
+.odd-tier,
+.even-tier {
+  margin: auto;
+  background-color: #f4f4f4bb;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.even-tier{
+  background-color: #fff;
+}
+
+.wrapper {
+  width: 95%;
+  height: 95%;
+  margin: 2% auto;
+}
+
+/*TIER 1.1 (main-titles)*/
+.main-titles {
+  grid-column: 1/2;
+  grid-row: 1;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.T1H {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.T1sH {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+/*TIER 1.2 (allure)*/
+.allure {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 40px 0;
+  justify-items: stretch;
+}
+
+.allure-left {
+  display: flex;
+  flex-direction: column;
+  align-items: middle;
+  grid-column: 1;
+  justify-self: start;
+}
+
+.allure-left h2 {
+  margin: auto;
+  padding: 20px;
+  font-style: italic;
+  place-self: stretch;
+  height: 100%;
+  width: 100%;
+  font-size: 2.4rem;
+  text-align: left;
+  font-weight: 300;
+  background-color: #f7e8d3;
+  border-radius: 5px;
+}
+
+.allure-left img {
+  width: 250px;
+  margin: auto;
+}
+
+.allure-left h3 {
+  margin: auto;
+  text-align: center;
+  place-self: stretch;
+  width: 100%
+}
+
+.call2action,
+.CB,
+#submit {
+  margin: auto;
+  place-self: stretch;
+  width: 100%;
+  padding: 15px;
+  background: #748A05;
+  border: 3px solid #748A05;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.call2action a,
+.CB a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem; 
+  font-family: futura, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.allure-right {
+  grid-column: 2;
+  grid-row: 1;
+  place-self: stretch;
+}
+
+.allure-right iframe {
+  border: 1px solid transparent;
+  max-height: 320px;
+  width: 100%;
+  height: 100%;
+}
+
+/*TIER 2 (about-us)*/
+.T2H {
+  text-indent: 20px;
+}
+
+/*TIER 3 (course)*/
+.T3, .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-auto-flow: row;
+  gap: 1rem;
+}
+
+.T3H {
+  grid-column: 1/-1;
+  grid-row: 1;
+  margin: 0;
+  justify-self: start;
+}
+
+.container {
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+
+.CH, .C {
+  background-color: #fefefe;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.CH {
+  border: 1px solid #748A05;
+}
+
+.CH h3 {
+  padding: 3%;
+  text-align: center;
+}
+
+.C {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-auto-flow: rows;
+}
+
+.atribute {
+  margin: 0;
+  padding: 1% 5%;
+  display: inherit;
+  grid-template-columns: 10fr 1fr;
+  font-weight: 600;
+}
+
+.mark {
+  width: 20px;
+  height: 20px;
+}
+
+/*TIER 4 (form)*/
+.T4 {
+  width: 60%;
+  margin: 3rem auto 1rem;
+  border: 1px dashed #1a1a1a;
+  border-radius: 15px;
+  padding: 6% 10%;
+}
+
+.T4>h3 {
+  margin-bottom: 2rem;
+}
+
+.T4>p {
+  text-indent: 0;
+  font-family: optima, sans-serif;
+  line-height: 2.5rem;
+}
+
+form {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr ; 
+  grid-auto-flow: columns;
+  gap: 2rem;
+}
+
+.email-label {
+  font-family: optima, sans-serif;
+  font-size: 2rem;
+}
+
+#email {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  width: 99%;
+}
+
+#submit {
+  background: #fff;
+  color: #748A05;
+  font-size: 1.5rem;
+  grid-column: 1/-1; 
+}
+
+/*footer*/
+footer {
+  grid-column:2/3;
+  grid-row:3/-1; 
+}
+
+.F {  
+  display: grid;
+  grid: 1fr auto / 2fr 1fr 1fr;
+}
+
+.F section:first-of-type {
+  justify-self: center;
+  align-self: center;
+}
+
+.F-logo {
+  display: block;
+  width: 80%;
+}
+
+footer ul {
+  padding: 0;
+}
+
+.F-nav-link {
+  line-height: 4.5rem;
+}
+
+.CI-link {
+  line-height: 3.5rem;
+}
+
+.F>p{
+  width: 100%;
+  text-align: center;
+  grid-row: 2;
+  grid-column: 1/-1;
+}
+
+/*QUERYS*/
+@media (max-width: 1414px) and (min-width: 966px) {
+
+.allure-left {
+  grid-column: 1/-1;
+  justify-self: stretch;
+}
+
+.allure-right {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+
+}
+
+@media (max-width: 965px) {
+
+header {
+  padding: 1%;
+  display: grid;
+  grid: [H-logo] 1fr [nav-bar] auto / auto-flow 1fr;
+}
+
+header ul {
+  gap: 2rem;
+}
+
+#header-img,
+#nav-bar {
+  grid-row: 1;
+  display: block;
+  margin: auto;
+}
+
+#nav-bar {
+  grid-row: 2;
+  text-align: center;
+}
+
+main {
+  margin-top: 80px;
+}
+
+.allure-left {
+  grid-column: 1/-1;
+  justify-self: stretch;
+}
+
+.allure-right {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+
+.T3 {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto repeat(3, 1fr);
+  grid-auto-flow: column;
+  gap: 2rem;
+}
+
+.T4 {
+  width: 100%;
+}
+
+.F {  
+  display: grid;
+  grid: repeat(3, 1fr) auto / auto-flow 1fr;
+}
+
+.F-logo {
+  display: block;
+  margin: auto;
+}
+
+.F>p{
+  grid-row: 4;
+}
+
+.F section:nth-of-type(2),
+.F section:nth-of-type(3) {
+  margin: 10%;
+}
+
+}

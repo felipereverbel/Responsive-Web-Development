@@ -1,0 +1,143 @@
+html, body {
+  background-color: white;
+  font-family: helvetica, assistant, sans-serif; 
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f1f1f;
+  scroll-behavior: smooth;
+  min-width: 450px;
+  margin: 0;
+}
+
+header {
+  text-align: left;
+  font-size: 1.8em;
+  margin: 10px; 
+  }
+
+nav header{
+  text-align: center;
+}
+
+nav {
+  width: 300px;
+  min-width: 300px;
+  height: 100%;
+  border-right: 1.6px solid grey;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+nav ul{
+  margin: 0; 
+  padding: 0;
+  margin-block-start: 1em;
+}
+
+nav li {
+  width: 100%;
+  border-top: 1.6px solid grey;
+  border-collapse: collapse;
+  text-align: match-parent;
+  position: relative;
+}
+
+nav li:last-of-type {
+  border-bottom: 1.6px solid grey;
+
+}
+.nav-link{
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+.img-link{
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+
+#logo {
+  max-width: 200px;
+  max-height: 200px;
+  padding: 25px 50px 25px;
+}
+
+section:first-of-type{
+  margin-top: 100px;
+}
+
+section:first-of-type>header{
+  line-height: 1;
+  margin-top: 0;
+}
+
+.main-section {
+  position: relative;
+  margin-left: 310px;
+  padding: 10px;
+}
+
+.main-section p {
+  text-align: justify;
+  text-indent: 30px;
+  margin-left: 20px;
+}
+
+.main-section li{
+  margin-left: 50px;
+}
+
+#numbered {
+  padding-left: 10px;
+}
+
+code {  background-color: #eee;
+  display: block;
+  margin: 10px 140px 10px 60px;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 1.5;
+  position: relatve;
+  white-space-collapse: preserve-breaks;
+}
+
+@media (max-width: 850px) {
+  
+#navbar {
+  width: 100%;
+  min-width: 450px;
+  max-height: 250px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-bottom: 3px solid grey; 
+}
+
+.main-section {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+}
+
+#logo {
+  max-width: 200px;
+  max-height: 200px;
+  padding: 25px 160px 25px;
+}
+
+.nav-link {
+  padding: 13px 20px;
+}
+
+section:first-of-type{
+  margin-top: 10px;
+}
+}

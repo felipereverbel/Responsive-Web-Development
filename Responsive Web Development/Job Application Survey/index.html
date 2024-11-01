@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Job Application</title>
+    <meta 
+      charset="utc-8" 
+      name="viewport" 
+      content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Job Application</h1>
+    <h2>Software Developer</h2>
+    <p class="pheader" id="description">Enter your information to apply for this position.<p>
+    <div id="container">
+      <form id="survey-form">
+        <fieldset>
+          <label id="name-label"  for="name">Name: 
+            <input
+              id="name"
+              type="text" 
+              placeholder="Enter your name here" 
+              required/>
+          </label>
+          <label id="email-label" for="email">E-mail: 
+            <input
+              id="email"
+              type="email"  
+              placeholder="Enter your email here" 
+              required/>
+          </label>
+          <label id="number-label" for="number">Age: 
+          <input
+          id="number"
+          type="number"
+          placeholder="Enter your age"
+          min="13"
+          max="120"
+          required/>
+        </fieldset>
+        <fieldset>
+          <label>What is your highest degree?</label>
+            <select 
+              id="dropdown">
+                <option></option>
+                <option>Highschool Diploma</option>
+                <option>Associate Degree</option>
+                <option>Bachelor's Degree</option>
+                <option>Master's Degree</option>
+                <option>Doctarate's Degree</option>
+                <option>Professional's Degree</option>
+            </select>
+          <p class="pxp">Chose your level of experience: </p>
+          <label for="junior-opt">
+            <input  
+              class="inline"
+              id="first-opt"
+              type="radio" 
+              name="radio" 
+              class="radio"
+              value="First-job" 
+              checked/>First Job
+            </label>
+          <label for="senior-opt">
+              <input  
+              class="inline"
+              type="radio" 
+              name="radio" 
+              class="radio"
+              id="junior-opt" 
+              value="Junior"/>Junior
+          </label>
+          <label for="mid-opt">
+              <input  
+              class="inline"
+              type="radio" 
+              name="radio" 
+              class="radio"
+              id="mid-opt" 
+              value="Mid-level"/>Mid Level
+          </label>
+          <label for="senior-opt">
+              <input  
+              class="inline"
+              type="radio" 
+              name="radio" 
+              class="radio"
+              id="senior-opt" 
+              value="Senior"/>Senior
+          </label>
+          <p class="pskill">What are your main skills (choose 2)? </p>
+          <label for="node-js">
+            <input
+              class="inline"
+              type="checkbox"
+              id="node-js"
+              value="Node-JS"/> Node JS 
+          </label>
+          <label for="python">
+            <input
+              class="inline"
+              type="checkbox"
+              id="python"
+              value="Python"/> Python 
+          </label>
+          <label for="html">
+            <input
+              class="inline"
+              type="checkbox"
+              id="html"
+              value="HTML"/> HTML 
+          </label>
+          <label for="sql">
+            <input
+              class="inline"
+              type="checkbox"
+              id="sql"
+              value="SQL"/> SQL 
+          </label>
+          <label for="c++">
+          <input
+            class="inline"
+            type="checkbox"
+            id="c++"
+            value="C++"/> C++ 
+          </label>
+        </fieldset>
+        <p>Is there anything esle we should consider? </p>
+        <textarea id="add-info"></textarea>
+        <button
+        type="submit"
+        id="submit"
+        value="submit"
+        >Submit
+        </button>
+     </form>
+    </div>
+  </body>
+</html>

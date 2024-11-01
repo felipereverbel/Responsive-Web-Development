@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <meta name="description" content="Python Technincal Documentation Project Page" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header>Python Technical Documentation</header>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#Private_Projects">Private Projects</a></li>
+          <li><a class="nav-link" href="#Shared_Projects">Shared Projects</a></li>
+          <li><a class="nav-link" href="#Public_and_Open_Source_Projects">Public and Open Source Projects</a></li>
+          <li><a class="nav-link" href="#Four_Main_Sections_of_Docs_Folder">Four Main Sections of Docs Folder</a></li>
+          <li><a class="nav-link" href="#Where_do_I_start?">Where do I start?</a></li>
+          <li><a class="nav-link" href="#Sphinx">Sphinx</a></li>
+          <li><a class="nav-link" href="#reStructuredText">reStructuredText</a></li>
+          <li><a class="nav-link" href="#Code_Documentation_Advice">Code Documentation Advice</a></li>
+          <li><a class="nav-link" href="#Docstrings_and_Magic">Docstrings and Magic</a></li>
+          <li><a class="nav-link" href="#Docstrings_versus_Block_comments">Docstrings versus Block comments</a></li>
+          <li><a class="nav-link" href="#Writing_Docstrings">Writing Docstrings</a></li>
+            </img>
+        </ul>
+        <span. class="img-link">References (click here ↓) 
+          <a href="https://realpython.com/documenting-python-code/" target="#logo">
+            <img id="logo"  src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-1024.png"  alt="python-logo"></img>
+          </a>
+        </span>
+      </nav>
+      <section role="region" aria-labelledby="Intro" class="main-section" id="Introduction">
+        <header id="Intro">Introduction</header>
+        <p>When you write code, you write it for two primary audiences: your users and your developers (including yourself). Both audiences are equally important. If you’re like me, you’ve probably opened up old codebases and wondered to yourself, “What in the world was I thinking?” If you’re having a problem reading your own code, imagine what your users or other developers are experiencing when they’re trying to use or contribute to your code.</p>
+        <p>Python projects come in all sorts of shapes, sizes, and purposes. The way you document your project should suit your specific situation. Keep in mind who the users of your project are going to be and adapt to their needs. Depending on the project type, certain aspects of documentation are recommended. The general layout of the project and its documentation should be as follows:</p>
+        <code>project_root/
+        │
+        ├── project/  # Project source code
+        ├── docs/
+        ├── README
+        ├── HOW_TO_CONTRIBUTE
+        ├── CODE_OF_CONDUCT
+        ├── examples.py
+        </code>
+        <p>Projects can be generally subdivided into three major types: Private, Shared, and Public/Open Source.</p>
+      </section>
+      <section role="region" aria-labelledby="private" class="main-section" id="Private_Projects">
+        <header id="private">Private Projects</header>
+        <p>Private projects are projects intended for personal use only and generally aren’t shared with other users or developers. Documentation can be pretty light on these types of projects. There are some recommended parts to add as needed:</p>
+        <ul>
+          <li><b>Readme:</b> A brief summary of the project and its purpose. Include any special requirements for installation or operating the project.</li>
+          <li><b>examples.py:</b> A Python script file that gives simple examples of how to use the project.</li>
+        </ul>
+        <p>Remember, even though private projects are intended for you personally, you are also considered a user. Think about anything that may be confusing to you down the road and make sure to capture those in either comments, docstrings, or the readme.</p>
+      </section>
+      <section role="region" aria-labelledby="shared" class="main-section" id="Shared_Projects">
+        <header id="shared">Shared Projects</header>
+        <p>Shared projects are projects in which you collaborate with a few other people in the development and/or use of the project. The “customer” or user of the project continues to be yourself and those limited few that use the project as well.</p>
+        <p>Documentation should be a little more rigorous than it needs to be for a private project, mainly to help onboard new members to the project or alert contributors/users of new changes to the project. Some of the recommended parts to add to the project are the following:</p>
+        <ul>
+          <li><b>Readme:</b> A brief summary of the project and its purpose. Include any special requirements for installation or operating the project. <u>Additionally, add any major changes since the previous version</u>.
+</li>
+          <li><b>examples.py:</b> A Python script file that gives simple examples of how to use the projects.</li>
+          <li><b>How to Contribute:</b> This should include how new contributors to the project can start contributing.</li>
+        </ul>
+      </section>
+      <section role="region" aria-labelledby="open_source" class="main-section" id="Public_and_Open_Source_Projects">
+        <header id="open_source">Public and Open Source Projects</header>
+        <p>Public and Open Source projects are projects that are intended to be shared with a large group of users and can involve large development teams. These projects should place as high of a priority on project documentation as the actual development of the project itself. Some of the recommended parts to add to the project are the following:</p>
+        <ul>
+          <li><b>Readme:</b> A brief summary of the project and its purpose. Include any special requirements for installing or operating the projects. Additionally, add any major changes since the previous version. <u>Finally, add links to further documentation, bug reporting, and any other important information for the project. Dan Bader has put together a great tutorial on what all should be included in your readme.</u></li>
+          <li><b>How to Contribute:</b> This should include how new contributors to the project can help. <u>This includes developing new features, fixing known issues, adding documentation, adding new tests, or reporting issues.</u></li>
+          <li><b>Code of Conduct:</b> Defines how other contributors should treat each other when developing or using your software. This also states what will happen if this code is broken. If you’re using Github, a Code of Conduct template can be generated with recommended wording. For Open Source projects especially, consider adding this.</li>
+          <li><b>License:</b> A plaintext file that describes the license your project is using. For Open Source projects especially, consider adding this.</li>
+          <li><b>docs:</b> A folder that contains further documentation. The next section describes more fully what should be included and how to organize the contents of this folder.</li>
+        </ul>
+      </section>
+      <section role="region" aria-labelledby="four_sections" class="main-section" id="Four_Main_Sections_of_Docs_Folder">
+        <header id="four_sections">Four Main Sections of Docs Folder</header>
+        <p>Daniele Procida gave a wonderful PyCon 2017 talk and subsequent blog post about documenting Python projects. He mentions that all projects should have the following four major sections to help you focus your work:</p>
+        <ul>
+          <li><b>Tutorials:</b> Lessons that take the reader by the hand through a series of steps to complete a project (or meaningful exercise). Geared towards the user’s learning.</li>
+          <li><b>How to Guides</b> Guides that take the reader through the steps required to solve a common problem (problem-oriented recipes).</li>
+          <li><b>References:</b> Explanations that clarify and illuminate a particular topic. Geared towards understanding.</li>
+          <li><b>Explanations:</b> Technical descriptions of the machinery and how to operate it (key classes, functions, APIs, and so forth). Think Encyclopedia article.</li>
+        </ul>
+        <p>In the end, you want to make sure that your users have access to the answers to any questions they may have. By organizing your project in this manner, you’ll be able to answer those questions easily and in a format they’ll be able to navigate quickly.</p>
+      </section>
+      <section role="region" aria-labelledby="start_where" class="main-section" id="Where_do_I_start?">
+        <header id="star_where">Where do I start?</header>
+        <p>The documentation of projects have a simple progression:</p>
+        <ol>
+          <li id="numbered">No Documentation</li>
+          <li id="numbered">Some Documentation</li>
+          <li id="numbered">Complete Documentation</li>
+          <li id="numbered">Good Documentation</li>
+          <li id="numbered">Great Documentation</li>
+        </ol>
+        <p>If you’re at a loss about where to go next with your documentation, look at where your project is now in relation to the progression above. Do you have any documentation? If not, then start there. If you have some documentation but are missing some of the key project files, get started by adding those.</p>
+        <p>In the end, don’t get discouraged or overwhelmed by the amount of work required for documenting code. Once you get started documenting your code, it becomes easier to keep going. Feel free to comment if you have questions or reach out to the Real Python Team on social media, and we’ll help.</p>
+      </section>
+      <section role="region" aria-labelledby="sphinx" class="main-section" id="Sphinx">
+        <header id="sphinx">Sphinx</header>
+        <p>Sphinx is far and away the most popular Python documentation tool. Use it. It converts reStructuredText markup language into a range of output formats including HTML, LaTeX (for printable PDF versions), manual pages, and plain text.</p>
+        <p>There is also great, free hosting for your Sphinx docs: Read The Docs. Use it. You can configure it with commit hooks to your source repository so that rebuilding your documentation will happen automatically.</p>
+        <p>When run, Sphinx will import your code and using Python’s introspection features it will extract all function, method, and class signatures. It will also extract the accompanying docstrings, and compile it all into well structured and easily readable documentation for your project.</p>
+        <code>Note
+Sphinx is famous for its API generation, but it also works well for general project documentation. This Guide is built with Sphinx and is hosted on Read The Docs</code>
+      </section>
+      <section role="region" aria-labelledby="restruc" class="main-section" id="reStructuredText">
+        <header id="restruc">reStructuredText</header>
+        <p>Most Python documentation is written with reStructuredText. It’s like Markdown, but with all the optional extensions built in.</p>
+        <p>The reStructuredText Primer and the reStructuredText Quick Reference should help you familiarize yourself with its syntax.</p>
+      </section>
+      <section role="region" aria-labelledby="advice" class="main-section" id="Code_Documentation_Advice">
+        <header id="advice">Code Documentation Advice</header>
+        <p>Comments clarify the code and they are added with purpose of making the code easier to understand. In Python, comments begin with a hash (number sign) (#).</p>
+        <p>In Python, docstrings describe modules, classes, and functions:</p>
+        <code>def square_and_rooter(x):
+    """Return the square root of self times self."""
+    ...</code>
+        <p>In general, follow the comment section of PEP 8#comments (the “Python Style Guide”). More information about docstrings can be found at PEP 0257#specification (The Docstring Conventions Guide).</p>
+      </section>
+      <section role="region" aria-labelledby="magic" class="main-section" id="Docstrings_and_Magic">
+        <header id="magic">Docstrings and Magic</header>
+        <p>Some tools use docstrings to embed more-than-documentation behavior, such as unit test logic. Those can be nice, but you won’t ever go wrong with vanilla “here’s what this does.”
+
+</p>
+        <p>Tools like Sphinx will parse your docstrings as reStructuredText and render it correctly as HTML. This makes it very easy to embed snippets of example code in a project’s documentation.</p>
+        <p>Additionally, Doctest will read all embedded docstrings that look like input from the Python commandline (prefixed with “>>>”) and run them, checking to see if the output of the command matches the text on the following line. This allows developers to embed real examples and usage of functions alongside their source code. As a side effect, it also ensures that their code is tested and works.
+
+</p>
+        <code>def my_function(a, b):
+    """
+    >>> my_function(2, 3)
+    6
+    >>> my_function('a', 3)
+    'aaa'
+    """
+    return a * b</code>
+      </section>
+      <section role="region" aria-labelledby="versus" class="main-section" id="Docstrings_versus_Block_comments">
+        <header id="versus">Docstrings versus Block comments</header>
+        <p>These aren’t interchangeable. For a function or class, the leading comment block is a programmer’s note. The docstring describes the operation of the function or class:</p>
+        <code># This function slows down program execution for some reason.
+def square_and_rooter(x):
+    """Returns the square root of self times self."""
+    ...</code>
+        <p>Unlike block comments, docstrings are built into the Python language itself. This means you can use all of Python’s powerful introspection capabilities to access docstrings at runtime, compared with comments which are optimized out. Docstrings are accessible from both the __doc__ dunder attribute for almost every Python object, as well as with the built in help() function.</p>
+        <p>While block comments are usually used to explain what a section of code is doing, or the specifics of an algorithm, docstrings are more intended towards explaining other users of your code (or you in 6 months time) how a particular function can be used and the general purpose of a function, class, or module.</p>
+      </section>
+      <section role="region" aria-labelledby="docstrings" class="main-section" id="Writing_Docstrings">
+        <header id="docstrings">Writing Docstrings</header>
+        <p>Depending on the complexity of the function, method, or class being written, a one-line docstring may be perfectly appropriate. These are generally used for really obvious cases, such as:</p>
+        <code>def add(a, b):
+    """Add two numbers and return the result."""
+    return a + b</code>
+        <p>The docstring should describe the function in a way that is easy to understand. For simple cases like trivial functions and classes, simply embedding the function’s signature (i.e. add(a, b) -> result) in the docstring is unnecessary. This is because with Python’s inspect module, it is already quite easy to find this information if needed, and it is also readily available by reading the source code.</p>
+        <p>In larger or more complex projects however, it is often a good idea to give more information about a function, what it does, any exceptions it may raise, what it returns, or relevant details about the parameters.</p>
+        <p>For more detailed documentation of code a popular style used, is the one used by the NumPy project, often called NumPy style docstrings. While it can take up more lines than the previous example, it allows the developer to include a lot more information about a method, function, or class.
+
+</p>
+        <code>def random_number_generator(arg1, arg2):
+    """
+    Summary line.
+
+    Extended description of function.
+
+    Parameters
+    ----------
+    arg1 : int
+        Description of arg1
+    arg2 : str
+        Description of arg2
+
+    Returns
+    -------
+    int
+        Description of return value
+
+    """
+    return 42</code>
+        <p>The sphinx.ext.napoleon plugin allows Sphinx to parse this style of docstrings, making it easy to incorporate NumPy style docstrings into your project.</p>
+        <p>At the end of the day, it doesn’t really matter what style is used for writing docstrings; their purpose is to serve as documentation for anyone who may need to read or make changes to your code. As long as it is correct, understandable, and gets the relevant points across then it has done the job it was designed to do.</p>
+      </section>
+    </main>
+  </body>
+</html>
